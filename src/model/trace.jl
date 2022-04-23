@@ -4,6 +4,9 @@
 A Key identifies a particular record in a table: it is
 either an integer (in the context of an observed table) or a symbol
 (for a learned table).
+Key标识表中的特定记录:它可以是整数(在观察表的上下文中)，也可以是符号
+(对于学习过的表)。
+
 """
 const Key = Union{Int, Symbol}
 
@@ -12,6 +15,10 @@ const Key = Union{Int, Symbol}
 
 A RowTrace represents a record of the latent database.
 It maps VertexIDs in a PCleanClass to values.
+
+RowTrace表示潜在数据库的一条记录。
+它将PCleanClass中的顶点ID映射到值。
+
 """
 const RowTrace = Dict{VertexID, Any}
 
@@ -20,6 +27,9 @@ const RowTrace = Dict{VertexID, Any}
 
 A TableTrace represents the collection of currently instantiated records
 for a particular PClean class, i.e. the Pitman-Yor atoms.
+
+一个TableTrace表示一个特定的PClean类的当前实例化记录的集合，例如Pitman-Yor原子。
+
 """
 struct TableTrace
     # Pitman-Yor parameter values
